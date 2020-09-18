@@ -1,0 +1,9 @@
+{% extends 'signup.html' %}
+{% block content %}
+<h1 style="font-family: Arial, Helvetica, sans-serif; font: weight 1000;">Login</h1>
+<form action="info" method="POST">{% csrf_token %}
+    <input name="email2" type="email" placeholder="Email"/><br><br>
+    <input name="password3" type="password" placeholder="Password"/><br><br>
+    <input type="submit"/>
+</form>
+{% endblock %}
