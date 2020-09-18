@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup and and Login</title>
+</head>
+<body>
+    <center>
+    {% block content %}
+    <h1 style="font-family: Arial, Helvetica, sans-serif; font: weight 1000;">Signup</h1>
+    <div>
+     <form action="login" method="POST">{% csrf_token %}
+        <img src="{% static 'dont-be-afraid-to-fail-wallpaper.jpg' %}" alt="image" width="300" height="200" ><br><br>
+        <input  name="fname" type="text" placeholder="First Name" required/><br><br>
+        <input  name="lname" type="text" placeholder="Last Name" required /><br><br>
+        <input name="age"  type="number" placeholder="Age" required/><br><br>
+        <input id="unique id" name="unique id" type="" placeholder="Unique Id" maxlength= "6" minlength="6" pattern="[A-Za-z0-9]{6}" required/><br><br>
+        <input  name="email" type="email" placeholder="Email" required/><br><br>
+        <input name="password1"  type="password" placeholder="Password" minlength="8"required/><br><br>
+        <input  name="password2" type="password" placeholder="Confirm Password" minlength="8" required/><br><br>
+        <input type="submit"/>
+      </form>
+    </div>
+</center>
+{% endblock %}
+</body>
+</html>
